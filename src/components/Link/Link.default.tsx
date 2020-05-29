@@ -31,9 +31,7 @@ export const LinkDefault = ({
   matrix,
 }: ILinkDefaultProps) => {
 
-  const points = config.smartRouting ?
-    !!toPort && !!matrix ? generateSmartPath(matrix, startPos, endPos, fromPort, toPort) : generateRightAnglePath(startPos, endPos)
-    : generateCurvePath(startPos, endPos)
+  const points = generateSmartPath(matrix, startPos, endPos, fromPort, toPort);
 
   return (
     <svg style={{ overflow: 'visible', position: 'absolute', cursor: 'pointer', left: 0, right: 0 }}>
