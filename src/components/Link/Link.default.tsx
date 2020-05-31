@@ -31,7 +31,7 @@ export const LinkDefault = ({
   matrix,
 }: ILinkDefaultProps) => {
 
-  const points = generateSmartPath(matrix, startPos, endPos, fromPort, toPort);
+  const points = generateRightAnglePath(startPos, endPos);
 
   return (
     <svg style={{ overflow: 'visible', position: 'absolute', cursor: 'pointer', left: 0, right: 0 }}>
